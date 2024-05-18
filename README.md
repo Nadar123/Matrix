@@ -18,15 +18,12 @@ This project is a web application built with React, TypeScript, and Tailwind CSS
 4. Start the application with `npm start`.
 5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Features
+## Setting Up the Proxy Server
 
-- Dark/Light mode theme switch
-- (Add other features here)
+This application uses a proxy server to handle requests. To set up the proxy server, follow these steps:
 
-## Contributing
+1. Navigate to the `proxy-server` directory (replace `proxy-server` with the actual directory name if it's different).
+2. Install the proxy server dependencies with `npm install`.
+3. Start the proxy server with `npm start`.
 
-(Add instructions for how others can contribute to your project. Include details about how they can submit pull requests, report bugs, and ask for new features.)
-
-## License
-
-(Add information about your license here. If you're not sure what license to use, you can use [Choose a License](https://choosealicense.com/) to help you pick one.)
+The proxy server must be running for the application to function correctly. The application is configured to send requests to the proxy server, which then forwards them to the actual server.
