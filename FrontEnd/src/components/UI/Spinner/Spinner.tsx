@@ -1,4 +1,4 @@
-import ClipLoader from 'react-spinners/ClipLoader';
+import PuffLoader from 'react-spinners/PuffLoader';
 
 const override = {
   display: 'block',
@@ -10,7 +10,7 @@ type SpinnerProps = {
 
 const Spinner = ({ loading }: SpinnerProps) => {
   return (
-    <ClipLoader
+    <PuffLoader
       color='#4338ca'
       loading={loading}
       cssOverride={override}

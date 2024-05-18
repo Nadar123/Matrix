@@ -1,29 +1,10 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import CrudService from '../../services/ajax.service';
-
-interface IApp {
-  artistName: string;
-  id: string;
-  name: string;
-  releaseDate: string;
-  kind: string;
-  artworkUrl100: string;
-  genres: string[];
-  url: string;
-}
-
-interface IAppState {
-  id: string;
-  name: string;
-  artworkUrl100: string;
-  artistName: string;
-}
-
-interface IAppsResponse {
-  apps: IAppState[];
-  totalApps: number;
-  response: any;
-}
+import {
+  IApp,
+  IAppState,
+  IAppsResponse,
+} from '../../constants/interfaces.constant';
 
 const getAppsService = new CrudService<IApp>();
 

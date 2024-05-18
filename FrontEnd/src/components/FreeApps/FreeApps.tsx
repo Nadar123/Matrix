@@ -24,7 +24,7 @@ function FreeApps() {
         {freeApps.length > 0 ? (
           freeApps.map((app: any) => <FreeAppItem key={app.id} app={app} />)
         ) : (
-          <p>no posts to show</p>
+          <p>No Apps to show</p>
         )}
       </div>
     </div>

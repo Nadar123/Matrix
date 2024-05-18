@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import { Environment, SERVER_URLS } from '../constants/api.constants';
 
 export default class CrudService<T> {
@@ -7,6 +7,7 @@ export default class CrudService<T> {
   constructor() {
     this.baseUrl = SERVER_URLS[Environment.Development];
   }
+  // fetch free apps
   getFreeApps = async (): Promise<any> => {
     const url = `${this.baseUrl}/free-apps`; // Make a request to your server's root endpoint
 
@@ -19,8 +20,9 @@ export default class CrudService<T> {
     }
   };
 
+  // fetch paid apps
   getPaidApps = async (): Promise<any> => {
-    const url = `${this.baseUrl}/paid-apps`; // replace with your server's endpoint for paid apps
+    const url = `${this.baseUrl}/paid-apps`;
 
     try {
       const response = await axios.get(url);

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import paidApps from '../../paidApps.json';
 import PaidAppsItem from '../PaidAppsItem/PaidAppsItem';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPaidApps } from '../../state/slices/global.features';

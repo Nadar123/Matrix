@@ -2,12 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Layout from '../components/UI/Layout/Layout';
 import { useSelector } from 'react-redux';
 import { RootState } from '../state/store';
+import { AppData } from '../constants/interfaces.constant';
 
-interface AppData {
-  id: string;
-  artworkUrl100: string;
-  artistName: string;
-}
 function Favorites() {
   const [favoriteApps, setFavoriteApps] = useState<AppData[]>([]);
   const freeApps = useSelector((state: RootState) => state.global.freeApps);

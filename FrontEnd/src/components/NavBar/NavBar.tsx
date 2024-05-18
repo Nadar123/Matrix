@@ -1,28 +1,3 @@
-// import React from 'react';
-// import { NavLink } from 'react-router-dom';
-
-// function NavBar() {
-//   return (
-//     <div>
-//       <nav className='flex justify-between items-center p-4 bg-blue-500 dark:bg-black'>
-//         <div className='text-2xl font-semibold text-white dark:bg-black'>
-//           AppStore Assigment
-//         </div>
-
-//         <div className='flex items-baseline'>
-//           <NavLink to='/' className='p-2'>
-//             Home
-//           </NavLink>
-//           <NavLink to='/favorites' className='p-2'>
-//             Favorites
-//           </NavLink>
-//         </div>
-//       </nav>
-//     </div>
-//   );
-// }
-
-// export default NavBar;
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -59,7 +34,7 @@ function NavBar() {
             Home
           </NavLink>
           <NavLink to='/favorites' className='p-2 text-white'>
-            Favorites
+            Favorites{' '}
           </NavLink>
         </div>
       </nav>

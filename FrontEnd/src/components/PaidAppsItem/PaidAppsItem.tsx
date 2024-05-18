@@ -1,13 +1,7 @@
 import React from 'react';
 import useLike from '../../hooks/useLike';
-interface PaidAppItemProps {
-  app: App;
-}
-interface App {
-  id: string;
-  artworkUrl100: string;
-  artistName: string;
-}
+import { PaidAppItemProps } from '../../constants/interfaces.constant';
+
 function PaidAppsItem({ app }: PaidAppItemProps) {
   const { isLiked, toggleLike } = useLike(app.id);
 

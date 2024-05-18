@@ -4,7 +4,9 @@
   "description": "Just trying how express works with codesandbox",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js localhost 8080"
+    "start": "node src/index.js",
+    "client": "cd ../frontend && npm start",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "dependencies": {
     "axios": "^1.6.8",
@@ -14,6 +16,7 @@
     "express": "4.16.4"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "nodemon": "1.18.4"
   },
   "keywords": []

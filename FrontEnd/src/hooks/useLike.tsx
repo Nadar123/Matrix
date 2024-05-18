@@ -11,13 +11,12 @@ function useLike(appId: string) {
   }, [appId]);
 
   const toggleLike = () => {
-    const newIsLiked = !isLiked;
-    setIsLiked(newIsLiked);
+    setIsLiked((prevIsLiked) => !prevIsLiked);
 
-    // Update the local storage
+    // Update local storage
     const storedLikes = localStorage.getItem('likedApps');
     let likedApps = storedLikes ? JSON.parse(storedLikes) : [];
-    if (newIsLiked) {
+    if (!isLiked) {
       likedApps.push(appId);
     } else {
       likedApps = likedApps.filter((id: any) => id !== appId);
