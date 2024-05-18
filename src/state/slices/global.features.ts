@@ -1,93 +1,122 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import CrudService from '../../services/ajax.service';
-import { IPostsResponse, IPost } from '../../constants/interfaces.constant';
-export type RootState = {
-  global: typeof initialState;
-};
+// import paidApps from '../../paidApps.json';
+// import freeApps from '../../freeApps.json';
 
-const getPostsService = new CrudService<IPost>();
+interface IApp {
+  artistName: string;
+  id: string;
+  name: string;
+  releaseDate: string;
+  kind: string;
+  artworkUrl100: string;
+  genres: string[];
+  url: string;
+}
 
-export const getPosts = createAsyncThunk(
-  'post/getPosts',
-  async ({ page, perPage }: { page: number; perPage: number }) => {
-    try {
-      const response = await getPostsService.getAll(page, perPage);
-      const totalPosts = response.headers['x-total-count'];
-      const data: IPostsResponse = {
-        posts: response.data,
-        totalPosts: parseInt(totalPosts, 10) || 0,
-      };
-      return data;
-    } catch (err) {
-      throw err;
-    }
+interface IAppState {
+  id: string;
+  name: string;
+}
+
+interface IAppsResponse {
+  apps: IAppState[];
+  totalApps: number;
+}
+
+const getAppsService = new CrudService<IApp>();
+
+export const getFreeApps = createAsyncThunk('app/getApps', async () => {
+  try {
+    const response = await getAppsService.getFreeApps();
+    const apps = response.map((app: IApp) => ({
+      id: app.id,
+      artistName: app.artistName,
+      artworkUrl100: app.artworkUrl100,
+    }));
+    const totalApps = apps.length;
+    const data: IAppsResponse = {
+      apps: apps,
+      totalApps: totalApps,
+    };
+    return data;
+  } catch (err) {
+    console.error('Error:', err);
+    throw err;
   }
-);
+});
 
-export const deletePost = createAsyncThunk(
-  'post/deletePost',
-  async (postId: number) => {
-    try {
-      await getPostsService.delete(postId);
-      return postId;
-    } catch (error) {
-      throw error;
-    }
+export const getPaidApps = createAsyncThunk('app/getPaidApps', async () => {
+  try {
+    const response = await getAppsService.getPaidApps();
+
+    const apps = response.map((app: IApp) => ({
+      id: app.id,
+      artistName: app.artistName,
+      artworkUrl100: app.artworkUrl100,
+    }));
+    const totalApps = apps.length;
+    const data: IAppsResponse = {
+      apps: apps,
+      totalApps: totalApps,
+    };
+    return data;
+  } catch (err) {
+    console.error('Error:', err);
+    throw err;
   }
-);
+});
 
 const initialState = {
-  counter: 0,
   loading: false,
-  posts: [] as IPost[],
   error: '',
-  totalPosts: 0,
+  freeApps: [] as IAppState[],
+  totalFreeApps: 0,
+  paidApps: [] as IAppState[],
+  totalPaidApps: 0,
+  darkMode: false,
 };
 
 const globalSlice = createSlice({
   name: 'global',
   initialState,
   reducers: {
-    increment: (state) => {
-      state.counter += 1;
-    },
-    decrement: (state) => {
-      state.counter -= 1;
+    toggleDarkMode: (state) => {
+      state.darkMode = !state.darkMode;
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(getPosts.pending, (state) => {
+    builder.addCase(getFreeApps.pending, (state) => {
       state.loading = true;
     });
 
-    builder.addCase(getPosts.fulfilled, (state, { payload }) => {
+    builder.addCase(getFreeApps.fulfilled, (state, { payload }) => {
       state.loading = false;
-      state.posts = payload.posts;
-      state.totalPosts = payload.totalPosts;
+      state.freeApps = payload.apps;
+      state.totalFreeApps = payload.totalApps;
     });
 
-    builder.addCase(getPosts.rejected, (state, { error }) => {
+    builder.addCase(getFreeApps.rejected, (state, { error }) => {
       state.loading = false;
       state.error = error.message || 'An error occurred';
     });
 
-    builder.addCase(deletePost.pending, (state) => {
+    builder.addCase(getPaidApps.pending, (state) => {
       state.loading = true;
     });
 
-    builder.addCase(deletePost.fulfilled, (state, { payload }) => {
+    builder.addCase(getPaidApps.fulfilled, (state, { payload }) => {
       state.loading = false;
-      state.posts = state.posts.filter((post) => post.id !== payload);
-      state.totalPosts -= 1;
+      state.paidApps = payload.apps;
+      state.totalPaidApps = payload.totalApps;
     });
 
-    builder.addCase(deletePost.rejected, (state, { error }) => {
+    builder.addCase(getPaidApps.rejected, (state, { error }) => {
       state.loading = false;
-      state.error =
-        error.message || 'An error occurred while deleting the post';
+      state.error = error.message || 'An error occurred';
     });
   },
 });
 
-export const { increment, decrement } = globalSlice.actions;
+export const { toggleDarkMode } = globalSlice.actions;
 export default globalSlice.reducer;

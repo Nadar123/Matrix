@@ -4,61 +4,56 @@ import {
   SERVER_URLS,
   API_ENDPOINTS,
 } from '../constants/api.constants';
+import freeApps from '../freeApps.json';
+import paidApps from '../paidApps.json';
 
 export default class CrudService<T> {
   baseUrl: string;
 
   constructor() {
     this.baseUrl = SERVER_URLS[Environment.Development];
-    this.baseUrl = SERVER_URLS[Environment.Development];
   }
 
-  getAll = async (
-    page: number,
-    perPage: number
-  ): Promise<AxiosResponse<T[]>> => {
-    const url = `${this.baseUrl}${API_ENDPOINTS.GET_POSTS}?_page=${page}&_limit=${perPage}`;
+  getFreeApps = async (): Promise<any> => {
+    const url = `${this.baseUrl}${API_ENDPOINTS.GET_APPS}`;
 
-    try {
-      const response = await axios.get<T[]>(url);
-      return response;
-    } catch (error) {
-      console.error('GET All Error:', error);
-      throw error;
-    }
+    return freeApps.feed.results;
+    // try {
+    //   const response = await fetch(url, {
+    //     headers: {
+    //       Accept: 'application/json',
+    //     },
+    //     mode: 'no-cors',
+    //   });
+    //   console.log('Server response:', response); // log the server response
+    //   return await response.text();
+    // } catch (error) {
+    //   console.error('GET Apps Error:', error);
+    //   throw error;
+    // }
   };
+  getPaidApps = async (): Promise<any> => {
+    const url = `${this.baseUrl}${API_ENDPOINTS.GET_APPS}`;
 
-  getById = async (id: number): Promise<AxiosResponse<T>> => {
-    const url = `${this.baseUrl}${API_ENDPOINTS.GET_POSTS}/${id}`;
-
-    const response = await axios.get<T>(url);
-    return response;
+    return paidApps.feed.results;
+    // try {
+    //   const response = await fetch(url, {
+    //     headers: {
+    //       Accept: 'application/json',
+    //     },
+    //     mode: 'no-cors',
+    //   });
+    //   console.log('Server response:', response); // log the server response
+    //   return await response.text();
+    // } catch (error) {
+    //   console.error('GET Apps Error:', error);
+    //   throw error;
+    // }
   };
 
   create = async (data: T): Promise<AxiosResponse<T>> => {
-    const url = `${this.baseUrl}${API_ENDPOINTS}`;
+    const url = `${this.baseUrl}${API_ENDPOINTS.CREATE_APP}`; // replace CREATE_APP with the actual endpoint
     const response = await axios.post<T>(url, data);
     return response;
-  };
-
-  // update = async (id: number, data: T): Promise<AxiosResponse<T>> => {
-  //   const url = `${this.baseUrl}${API_ENDPOINTS}/${id}`;
-  //   const response = await axios.put<T>(url, data);
-  //   return response;
-  // };
-  update = async (id: number, data: T): Promise<AxiosResponse<T>> => {
-    const url = `${this.baseUrl}${API_ENDPOINTS.GET_POSTS}/${id}`;
-    const response = await axios.put<T>(url, data);
-    return response;
-  };
-
-  delete = async (id: number): Promise<number> => {
-    const url = `${this.baseUrl}${API_ENDPOINTS.GET_POSTS}/${id}`;
-    try {
-      const response = await axios.delete(url);
-      return response.status;
-    } catch (error) {
-      throw error;
-    }
   };
 }

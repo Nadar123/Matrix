@@ -1,15 +1,17 @@
 export enum Environment {
-  Development = "development",
-  Production = "production",
+  Development = 'development',
+  Production = 'production',
 }
 
 export const SERVER_URLS = {
-  [Environment.Development]: "https://jsonplaceholder.typicode.com",
-  [Environment.Production]: "https://jsonplaceholder.typicode.com",
+  [Environment.Development]: 'https://rss.applemarketingtools.com',
+  [Environment.Production]: 'https://rss.applemarketingtools.com',
 };
 
 export enum API_ENDPOINTS {
-  GET_POSTS = "/posts",
+  GET_PAID_APPS = '/api/v2/us/apps/top-paid/10/apps.json',
+  GET_APPS = '/api/v2/us/apps/top-paid/25/apps.json',
+  CREATE_APP = '/api/v2/us/apps',
 }
 
 export const ERROR_CODE = {

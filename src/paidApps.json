@@ -1,0 +1,406 @@
+{
+    "feed": {
+        "title": "Top Paid Apps",
+        "id": "https://rss.applemarketingtools.com/api/v2/us/apps/top-paid/25/apps.json",
+        "author": {
+            "name": "Apple",
+            "url": "https://www.apple.com/"
+        },
+        "links": [{
+            "self": "https://rss.applemarketingtools.com/api/v2/us/apps/top-paid/25/apps.json"
+        }],
+        "copyright": "Copyright © 2024 Apple Inc. All rights reserved.",
+        "country": "us",
+        "icon": "https://www.apple.com/favicon.ico",
+        "updated": "Fri, 17 May 2024 10:23:03 +0000",
+        "results": [{
+                "artistName": "Shadow Launch Technology Limited",
+                "id": "932747118",
+                "name": "Shadowrocket",
+                "releaseDate": "2015-04-14",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/61/c4/6161c411-89bd-9bc1-a97c-3c1f2707bc32/AppIcon-0-0-1x_U007emarketing-0-10-0-0-85-220.png/100x100bb.png",
+                "genres": [],
+                "url": "https://apps.apple.com/us/app/shadowrocket/id932747118"
+            },
+            {
+                "artistName": "HotSchedules",
+                "id": "294934058",
+                "name": "HotSchedules",
+                "releaseDate": "2008-10-31",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/64/fa/4e/64fa4ed8-c2c4-8c89-d102-6ea4a444f4c2/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/100x100bb.png",
+                "genres": [],
+                "url": "https://apps.apple.com/us/app/hotschedules/id294934058"
+            },
+            {
+                "artistName": "Domus Technica",
+                "id": "529815782",
+                "name": "The Wonder Weeks",
+                "releaseDate": "2012-05-30",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a2/26/7c/a2267c7e-3133-0306-407b-8613fa02c297/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/100x100bb.png",
+                "genres": [],
+                "url": "https://apps.apple.com/us/app/the-wonder-weeks/id529815782"
+            },
+            {
+                "artistName": "Savage Interactive Pty Ltd",
+                "id": "916366645",
+                "name": "Procreate Pocket",
+                "releaseDate": "2014-12-17",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fd/d3/9e/fdd39eae-9928-d1f1-ed34-953927c46e62/AppIcon-0-0-1x_U007emarketing-0-5-0-0-85-220.png/100x100bb.png",
+                "genres": [],
+                "url": "https://apps.apple.com/us/app/procreate-pocket/id916366645"
+            },
+            {
+                "artistName": "Henrik Rydgård",
+                "id": "6502287918",
+                "name": "PPSSPP Gold - PSP emulator",
+                "releaseDate": "2024-05-15",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b1/34/3c/b1343c72-0f72-855e-fc5e-acef1b256de8/AppIconGold-0-0-1x_U007epad-0-85-220.png/100x100bb.png",
+                "genres": [],
+                "url": "https://apps.apple.com/us/app/ppsspp-gold-psp-emulator/id6502287918"
+            },
+            {
+                "artistName": "Base Velocity, LLC",
+                "id": "288419283",
+                "name": "RadarScope",
+                "releaseDate": "2019-02-12",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/c0/06/b8/c006b85b-eb98-63ea-0c02-47d549399e24/App_Icon-0-1x_U007emarketing-0-0-0-7-0-0-85-220-0.png/100x100bb.png",
+                "genres": [],
+                "url": "https://apps.apple.com/us/app/radarscope/id288419283"
+            },
+            {
+                "artistName": "44SEVEN MEDIA, LLC",
+                "id": "1502228408",
+                "name": "75 Hard",
+                "releaseDate": "2020-06-19",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/48/c9/1d/48c91dac-f43b-790e-a93a-0f68470a800f/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.png",
+                "genres": [],
+                "url": "https://apps.apple.com/us/app/75-hard/id1502228408"
+            },
+            {
+                "artistName": "Tantsissa",
+                "id": "1164801111",
+                "name": "AutoSleep Track Sleep on Watch",
+                "releaseDate": "2016-12-20",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/b6/93/3a/b6933ab1-4b98-67a3-39da-1fb08e3d33c0/AppIcon-0-0-1x_U007emarketing-0-2-0-85-220.png/100x100bb.png",
+                "genres": [],
+                "url": "https://apps.apple.com/us/app/autosleep-track-sleep-on-watch/id1164801111"
+            },
+            {
+                "artistName": "Ankitects Pty Ltd",
+                "id": "373493387",
+                "name": "AnkiMobile Flashcards",
+                "releaseDate": "2010-05-27",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/73/d2/3f/73d23fde-5314-190d-8afa-a3c82c68c0f5/AppIcon-0-0-1x_U007emarketing-0-4-0-85-220.png/100x100bb.png",
+                "genres": [],
+                "url": "https://apps.apple.com/us/app/ankimobile-flashcards/id373493387"
+            },
+            {
+                "artistName": "Skyhook",
+                "id": "6449003064",
+                "name": "Goblin Tools",
+                "releaseDate": "2023-05-31",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/98/d1/49/98d149b0-645a-7cf4-fb16-3948ff3dd471/AppIcon-1x_U007emarketing-0-10-0-85-220.png/100x100bb.png",
+                "genres": [],
+                "url": "https://apps.apple.com/us/app/goblin-tools/id6449003064"
+            },
+            {
+                "artistName": "SDS Weather LLC",
+                "id": "1439881811",
+                "name": "RadarOmega",
+                "releaseDate": "2019-03-14",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a7/10/93/a710933f-6d27-5051-35a4-14628eb59772/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6001",
+                        "name": "Weather",
+                        "url": "https://itunes.apple.com/us/genre/id6001"
+                    },
+                    {
+                        "genreId": "6017",
+                        "name": "Education",
+                        "url": "https://itunes.apple.com/us/genre/id6017"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/radaromega/id1439881811"
+            },
+            {
+                "artistName": "Monash University",
+                "id": "586149216",
+                "name": "Monash FODMAP Diet",
+                "releaseDate": "2012-12-17",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/52/8f/6f/528f6fd9-d01c-7c75-c0bb-30b9f41e8c27/AppIcon-1x_U007emarketing-0-6-0-85-220-0.jpeg/100x100bb.png",
+                "genres": [{
+                        "genreId": "6020",
+                        "name": "Medical",
+                        "url": "https://itunes.apple.com/us/genre/id6020"
+                    },
+                    {
+                        "genreId": "6013",
+                        "name": "Health & Fitness",
+                        "url": "https://itunes.apple.com/us/genre/id6013"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/monash-fodmap-diet/id586149216"
+            },
+            {
+                "artistName": "TonalEnergy, Inc",
+                "id": "497716362",
+                "name": "TonalEnergy Tuner & Metronome",
+                "releaseDate": "2012-02-18",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/5b/6b/64/5b6b641d-bbf2-c751-98a1-03706074be96/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6011",
+                        "name": "Music",
+                        "url": "https://itunes.apple.com/us/genre/id6011"
+                    },
+                    {
+                        "genreId": "6017",
+                        "name": "Education",
+                        "url": "https://itunes.apple.com/us/genre/id6017"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/tonalenergy-tuner-metronome/id497716362"
+            },
+            {
+                "artistName": "SEEKRTECH CO., LTD.",
+                "id": "866450515",
+                "name": "Forest: Focus for Productivity",
+                "releaseDate": "2014-05-10",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/07/73/c9/0773c931-9336-10fe-7d72-b648e9b48e39/AppIcon-0-0-1x_U007epad-0-0-0-85-220.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6007",
+                        "name": "Productivity",
+                        "url": "https://itunes.apple.com/us/genre/id6007"
+                    },
+                    {
+                        "genreId": "6012",
+                        "name": "Lifestyle",
+                        "url": "https://itunes.apple.com/us/genre/id6012"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/forest-focus-for-productivity/id866450515"
+            },
+            {
+                "artistName": "Terminal Eleven LLC",
+                "id": "404990064",
+                "name": "SkyView®",
+                "releaseDate": "2010-12-10",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple122/v4/7a/6f/c4/7a6fc47c-ad7e-3fd7-c3fb-511a31053390/AppIcon-0-0-1x_U007emarketing-0-4-0-85-220.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6017",
+                        "name": "Education",
+                        "url": "https://itunes.apple.com/us/genre/id6017"
+                    },
+                    {
+                        "genreId": "6016",
+                        "name": "Entertainment",
+                        "url": "https://itunes.apple.com/us/genre/id6016"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/skyview/id404990064"
+            },
+            {
+                "artistName": "My Macros LLC",
+                "id": "475249619",
+                "name": "My Macros+ | Diet & Calories",
+                "releaseDate": "2011-10-28",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7d/d4/af/7dd4af48-50d6-81f8-f548-1a7f8cf8eabe/AppIcon2022-0-0-1x_U007epad-0-0-sRGB-85-220.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6013",
+                        "name": "Health & Fitness",
+                        "url": "https://itunes.apple.com/us/genre/id6013"
+                    },
+                    {
+                        "genreId": "6012",
+                        "name": "Lifestyle",
+                        "url": "https://itunes.apple.com/us/genre/id6012"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/my-macros-diet-calories/id475249619"
+            },
+            {
+                "artistName": "Neil Davies",
+                "id": "1536762482",
+                "name": "Spirit Talker ®",
+                "releaseDate": "2020-10-30",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/28/e3/e4/28e3e4f3-b98f-1a20-2865-93990b2b801e/AppIcon-1x_U007emarketing-0-3-0-0-85-220-0.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6012",
+                        "name": "Lifestyle",
+                        "url": "https://itunes.apple.com/us/genre/id6012"
+                    },
+                    {
+                        "genreId": "6016",
+                        "name": "Entertainment",
+                        "url": "https://itunes.apple.com/us/genre/id6016"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/spirit-talker/id1536762482"
+            },
+            {
+                "artistName": "Dave Pascoe",
+                "id": "317809458",
+                "name": "LiveATC Air Radio",
+                "releaseDate": "2009-06-09",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/b4/f2/45/b4f2452e-0723-b9a8-d396-626cbf9ee0a9/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6003",
+                        "name": "Travel",
+                        "url": "https://itunes.apple.com/us/genre/id6003"
+                    },
+                    {
+                        "genreId": "6016",
+                        "name": "Entertainment",
+                        "url": "https://itunes.apple.com/us/genre/id6016"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/liveatc-air-radio/id317809458"
+            },
+            {
+                "artistName": "活鹏 麦",
+                "id": "1556671822",
+                "name": "Merge Watermelon for watch",
+                "releaseDate": "2021-03-04",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6b/78/27/6b78276a-56a1-edcf-2adb-5fe552269cd7/AppIcon-0-0-1x_U007emarketing-0-9-85-220.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6016",
+                        "name": "Entertainment",
+                        "url": "https://itunes.apple.com/us/genre/id6016"
+                    },
+                    {
+                        "genreId": "6012",
+                        "name": "Lifestyle",
+                        "url": "https://itunes.apple.com/us/genre/id6012"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/merge-watermelon-for-watch/id1556671822"
+            },
+            {
+                "artistName": "Moment Inc.",
+                "id": "927098908",
+                "name": "Pro Camera by Moment",
+                "releaseDate": "2014-11-18",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/58/3c/32/583c3281-67eb-3b54-d8b2-bf161794388b/Community1-1x_U007epad-0-0-85-220-0.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6008",
+                        "name": "Photo & Video",
+                        "url": "https://itunes.apple.com/us/genre/id6008"
+                    },
+                    {
+                        "genreId": "6003",
+                        "name": "Travel",
+                        "url": "https://itunes.apple.com/us/genre/id6003"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/pro-camera-by-moment/id927098908"
+            },
+            {
+                "artistName": "Hindsight Labs LLC",
+                "id": "1303222868",
+                "name": "Paprika Recipe Manager 3",
+                "releaseDate": "2017-11-15",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/ad/db/64/addb6486-a7e0-359e-cd91-b69ee709f132/AppIcon-0-1x_U007emarketing-0-7-0-0-85-220-0.png/100x100bb.png",
+                "genres": [{
+                    "genreId": "6023",
+                    "name": "Food & Drink",
+                    "url": "https://itunes.apple.com/us/genre/id6023"
+                }],
+                "url": "https://apps.apple.com/us/app/paprika-recipe-manager-3/id1303222868"
+            },
+            {
+                "artistName": "Threema GmbH",
+                "id": "578665578",
+                "name": "Threema. The Secure Messenger",
+                "releaseDate": "2012-12-28",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d7/2b/a6/d72ba6f8-f645-25d7-f4aa-b9687bfcc8fb/AppIcon-0-0-1x_U007epad-0-0-0-0-0-0-85-220.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6005",
+                        "name": "Social Networking",
+                        "url": "https://itunes.apple.com/us/genre/id6005"
+                    },
+                    {
+                        "genreId": "6002",
+                        "name": "Utilities",
+                        "url": "https://itunes.apple.com/us/genre/id6002"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/threema-the-secure-messenger/id578665578"
+            },
+            {
+                "artistName": "Image Line Software",
+                "id": "432850619",
+                "name": "FL Studio Mobile",
+                "releaseDate": "2011-06-21",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/93/b5/ca/93b5ca64-6178-0453-1df8-0a69b02c7a1a/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/100x100bb.png",
+                "genres": [{
+                    "genreId": "6011",
+                    "name": "Music",
+                    "url": "https://itunes.apple.com/us/genre/id6011"
+                }],
+                "url": "https://apps.apple.com/us/app/fl-studio-mobile/id432850619"
+            },
+            {
+                "artistName": "Kaylee Calderolla",
+                "id": "1030595027",
+                "name": "Wipr",
+                "releaseDate": "2015-09-24",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3f/01/b2/3f01b2c9-db76-ba64-4915-89e9dd469a34/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6007",
+                        "name": "Productivity",
+                        "url": "https://itunes.apple.com/us/genre/id6007"
+                    },
+                    {
+                        "genreId": "6002",
+                        "name": "Utilities",
+                        "url": "https://itunes.apple.com/us/genre/id6002"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/wipr/id1030595027"
+            },
+            {
+                "artistName": "Fat Cigar Productions Ltd",
+                "id": "1111420122",
+                "name": "Hear My Baby Heart beat App",
+                "releaseDate": "2016-06-01",
+                "kind": "apps",
+                "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/89/f7/9d/89f79d08-4fa3-1e52-05c8-ce67fa53da3f/AppIcon-0-0-1x_U007emarketing-0-0-0-4-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/100x100bb.png",
+                "genres": [{
+                        "genreId": "6020",
+                        "name": "Medical",
+                        "url": "https://itunes.apple.com/us/genre/id6020"
+                    },
+                    {
+                        "genreId": "6012",
+                        "name": "Lifestyle",
+                        "url": "https://itunes.apple.com/us/genre/id6012"
+                    }
+                ],
+                "url": "https://apps.apple.com/us/app/hear-my-baby-heart-beat-app/id1111420122"
+            }
+        ]
+    }
+}
