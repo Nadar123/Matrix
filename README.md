@@ -10,20 +10,46 @@ This project is a web application built with React, TypeScript, and Tailwind CSS
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [React Router](https://reactrouter.com/)
 
+## Running the Project
+
+This project is composed of a frontend and a backend, which can be run simultaneously using [Concurrently](https://www.npmjs.com/package/concurrently).
+
+### Prerequisites
+
+Before running the project, make sure you have [Node.js](https://nodejs.org/) installed.
+
 ## Running the Application Locally
 
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Install the dependencies with `npm install`.
-4. Start the application with `npm start`.
-5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. Navigate to the backend directory and install the dependencies:
 
-## Setting Up the Proxy Server
+   ```bash
+   cd backend
+   npm install
 
+   Navigate to the frontend directory and install the dependencies:
+   ```
+
+cd ../frontend
+npm install
+
+To start both the frontend and backend servers at the same time, navigate to the backend directory and run the following command:
+
+npm run dev
+
+The frontend server will be running on http://localhost:3000 and the backend server will be running on http://localhost:8080 (or whatever ports you have configured).
+
+Setting Up the Proxy Server
 This application uses a proxy server to handle requests. To set up the proxy server, follow these steps:
 
-1. Navigate to the `proxy-server` directory (replace `proxy-server` with the actual directory name if it's different).
-2. Install the proxy server dependencies with `npm install`.
-3. Start the proxy server with `npm start`.
-
+Navigate to the proxy-server directory (replace proxy-server with the actual directory name if it's different).
+Install the proxy server dependencies with npm install.
+Start the proxy server with npm start.
 The proxy server must be running for the application to function correctly. The application is configured to send requests to the proxy server, which then forwards them to the actual server.
+
+```
+
+Please replace backend and frontend with your actual directory names if they're different. Also, adjust the port numbers according to your project's configuration.
+```
