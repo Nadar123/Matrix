@@ -37,7 +37,9 @@ npm install
 
 To start both the frontend and backend servers at the same time, navigate to the backend directory and run the following command:
 
+```bash
 npm run dev
+```
 
 The frontend server will be running on http://localhost:3000 and the backend server will be running on http://localhost:8080 (or whatever ports you have configured).
 
