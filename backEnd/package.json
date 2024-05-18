@@ -1,0 +1,19 @@
+{
+  "name": "simple-express-server",
+  "version": "1.0.0",
+  "description": "Just trying how express works with codesandbox",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js localhost 8080"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "express": "4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  },
+  "keywords": []
+}
