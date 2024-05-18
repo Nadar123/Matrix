@@ -1,9 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import {
-  Environment,
-  SERVER_URLS,
-  API_ENDPOINTS,
-} from '../constants/api.constants';
+import { Environment, SERVER_URLS } from '../constants/api.constants';
 
 export default class CrudService<T> {
   baseUrl: string;
@@ -33,11 +29,5 @@ export default class CrudService<T> {
       console.error('GET Apps Error:', error);
       throw error;
     }
-  };
-
-  create = async (data: T): Promise<AxiosResponse<T>> => {
-    const url = `${this.baseUrl}${API_ENDPOINTS.CREATE_APP}`; // replace CREATE_APP with the actual endpoint
-    const response = await axios.post<T>(url, data);
-    return response;
   };
 }
