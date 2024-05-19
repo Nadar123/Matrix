@@ -1,10 +1,6 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import CrudService from '../../services/ajax.service';
-import {
-  IApp,
-  IAppState,
-  IAppsResponse,
-} from '../../constants/interfaces.constant';
+import { IApp, IAppState } from '../../constants/interfaces.constant';
 
 const getAppsService = new CrudService<IApp>();
 
@@ -16,11 +12,8 @@ export const getFreeApps = createAsyncThunk('app/getFreeApps', async () => {
       artistName: app.artistName,
       artworkUrl100: app.artworkUrl100,
     }));
-    const totalApps = apps.length;
-    const data: IAppsResponse = {
+    const data = {
       apps: apps,
-      totalApps: totalApps,
-      response: response, // assign the entire response object
     };
 
     return data;
@@ -39,11 +32,8 @@ export const getPaidApps = createAsyncThunk('app/getPaidApps', async () => {
       artistName: app.artistName,
       artworkUrl100: app.artworkUrl100,
     }));
-    const totalApps = apps.length;
-    const data: IAppsResponse = {
+    const data = {
       apps: apps,
-      totalApps: totalApps,
-      response: response,
     };
     return data;
   } catch (err) {
@@ -56,30 +46,21 @@ const initialState = {
   loading: false,
   error: '',
   freeApps: [] as IAppState[],
-  totalFreeApps: 0,
   paidApps: [] as IAppState[],
-  totalPaidApps: 0,
-  darkMode: false,
-  response: null,
 };
 
 const globalSlice = createSlice({
   name: 'global',
   initialState,
-  reducers: {
-    toggleDarkMode: (state) => {
-      state.darkMode = !state.darkMode;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getFreeApps.pending, (state) => {
       state.loading = true;
     });
 
     builder.addCase(getFreeApps.fulfilled, (state, action) => {
+      state.loading = false;
       state.freeApps = action.payload.apps;
-      state.totalFreeApps = action.payload.totalApps;
-      state.response = action.payload.response; // Use action.payload.response here
     });
 
     builder.addCase(getFreeApps.rejected, (state, { error }) => {
@@ -94,7 +75,6 @@ const globalSlice = createSlice({
     builder.addCase(getPaidApps.fulfilled, (state, { payload }) => {
       state.loading = false;
       state.paidApps = payload.apps;
-      state.totalPaidApps = payload.totalApps;
     });
 
     builder.addCase(getPaidApps.rejected, (state, { error }) => {
@@ -104,5 +84,5 @@ const globalSlice = createSlice({
   },
 });
 
-export const { toggleDarkMode } = globalSlice.actions;
+export const {} = globalSlice.actions;
 export default globalSlice.reducer;

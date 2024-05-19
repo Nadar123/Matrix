@@ -8,10 +8,7 @@ function Layout({
   isFavoritesPage?: boolean;
 }) {
   return (
-    <div
-      style={isFavoritesPage ? { minHeight: '100vh' } : {}}
-      className='p-12 text-center w-full mx-auto'
-    >
+    <div className='py-12 text-center w-full mx-auto min-h-screen'>
       {children}
     </div>
   );

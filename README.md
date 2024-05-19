@@ -1,4 +1,4 @@
-# Matrix Task
+# Matrix AppStore
 
 This project is a web application built with React, TypeScript, and Tailwind CSS. It uses Redux Toolkit for state management and React Router for routing. The application also supports dark and light themes.
 
@@ -14,10 +14,6 @@ This project is a web application built with React, TypeScript, and Tailwind CSS
 
 This project is composed of a frontend and a backend, which can be run simultaneously using [Concurrently](https://www.npmjs.com/package/concurrently).
 
-### Prerequisites
-
-Before running the project, make sure you have [Node.js](https://nodejs.org/) installed.
-
 ## Running the Application Locally
 
 1. Clone the repository to your local machine.
@@ -30,10 +26,9 @@ Before running the project, make sure you have [Node.js](https://nodejs.org/) in
    npm install
 
    Navigate to the frontend directory and install the dependencies:
+   cd ../frontend
+   npm install
    ```
-
-cd ../frontend
-npm install
 
 To start both the frontend and backend servers at the same time, navigate to the backend directory and run the following command:
 

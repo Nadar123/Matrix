@@ -60,7 +60,10 @@
     "devDependencies": {
         "@types/lodash": "^4.14.202",
         "autoprefixer": "^10.4.19",
+        "comlink-loader": "^2.0.0",
         "postcss": "^8.4.38",
-        "tailwindcss": "^3.4.3"
+        "tailwindcss": "^3.4.3",
+        "worker-loader": "^3.0.8",
+        "workerize-loader": "^2.0.2"
     }
 }

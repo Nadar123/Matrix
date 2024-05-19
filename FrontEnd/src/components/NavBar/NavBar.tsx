@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 function NavBar() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   const handleThemeChange = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
   };
 
   useEffect(() => {
@@ -17,12 +19,16 @@ function NavBar() {
       document.body.classList.remove('dark');
     }
   }, [theme]);
+
   return (
     <div>
       <nav className='flex justify-between items-center p-4 bg-blue-500 dark:bg-gray-800'>
-        <div className='text-2xl font-semibold text-white dark:text-gray-300 '>
+        <Link
+          to='/'
+          className='text-2xl font-semibold text-white dark:text-gray-300'
+        >
           AppStore Assigment
-        </div>
+        </Link>
 
         <div className='flex items-center'>
           <button

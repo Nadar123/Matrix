@@ -1,14 +1,16 @@
 import React from 'react';
 import useLike from '../../hooks/useLike';
 import { FreeAppItemProps } from '../../constants/interfaces.constant';
+import useImageLoader from '../../hooks/useImageLoader';
 
 function FreeAppItem({ app }: FreeAppItemProps) {
   const { isLiked, toggleLike } = useLike(app.id);
+  const { imageObjectURL } = useImageLoader(app.artworkUrl100);
 
   return (
     <div
       key={app.id}
-      className='w-1/3 text-center m-8 border border-solid border-gray-400'
+      className='w-1/3 text-center border border-solid border-gray-400'
     >
       <div className='pb-4'>
         <div
@@ -33,10 +35,11 @@ function FreeAppItem({ app }: FreeAppItemProps) {
           </svg>
         </div>
       </div>
-      <div className='flex justify-center w-[220px] h-full mx-auto overflow-hidden cursor-pointer'>
+      <div className='flex justify-center w-[300px] h-full mx-auto overflow-hidden cursor-pointer'>
         <img
+          style={{ minHeight: '100px' }}
           className='object-cover rounded-[10px]'
-          src={app.artworkUrl100}
+          src={imageObjectURL || ''}
           alt={app.artistName}
         />
       </div>

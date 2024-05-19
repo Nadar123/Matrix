@@ -35,7 +35,7 @@ function Favorites() {
   return (
     <>
       <Layout isFavoritesPage={true}>
-        <div className='grid grid-cols-3 gap-4 text-center p-5'>
+        <div className='grid grid-cols-4 gap-4 text-center p-5'>
           {favoriteApps.length > 0 ? (
             favoriteApps.map((app) => (
               <div
@@ -55,7 +55,9 @@ function Favorites() {
               </div>
             ))
           ) : (
-            <p className='text-center'>No selected apps in Favorites.</p>
+            <p className='text-center dark:text-gray-100'>
+              No selected apps in Favorites.
+            </p>
           )}
         </div>
       </Layout>
