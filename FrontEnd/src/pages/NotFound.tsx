@@ -4,7 +4,7 @@ import Layout from '../components/UI/Layout/Layout';
 
 const NotFoundPage = () => {
   return (
-    <Layout isFavoritesPage={true}>
+    <Layout>
       <h1 className='text-6xl text-black dark:text-white'>404</h1>
       <p className='mb-8 text-black dark:text-white'>Page not found!</p>
       <Link
