@@ -36,21 +36,6 @@ To start both the frontend and backend servers at the same time, navigate to the
 npm run dev
 ```
 
-```bash
-Second option:
-
-Start the backend
-
-cd backend
-npm start
-
-In a new terminal window, start the frontend
-
-cd ../frontend
-npm start
-
-```
-
 The frontend server will be running on http://localhost:3000 and the backend server will be running on http://localhost:8080 (or whatever ports you have configured).
 
 Setting Up the Proxy Server
