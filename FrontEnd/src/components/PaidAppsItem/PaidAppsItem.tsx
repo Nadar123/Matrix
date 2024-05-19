@@ -8,7 +8,7 @@ function PaidAppsItem({ app }: PaidAppItemProps) {
   return (
     <div
       key={app.id}
-      className='flex items-center text-left flex-start pl-0 pr-4 bg-gray-200 dark:bg-gray-800 rounded-lg my-1  m-1.5 mx-auto w-11/12'
+      className='flex items-center text-left flex-start pl-0 pr-4 bg-gray-200 dark:bg-gray-800 rounded-lg my-1  m-1.5 w-[95%]'
     >
       <div className='p-2 w-[100px] h-full overflow-hidden cursor-pointer'>
         <img

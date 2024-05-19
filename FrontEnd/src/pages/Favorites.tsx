@@ -13,7 +13,7 @@ function Favorites() {
     const storedLikes = localStorage.getItem('likedApps');
     let likedAppIds = storedLikes ? JSON.parse(storedLikes) : [];
 
-    // Map the IAppState arrays to AppData arrays
+    // Mapping apps arrays
     const freeAppData = freeApps.map((app) => ({
       id: app.id,
       artworkUrl100: app.artworkUrl100,
@@ -27,7 +27,7 @@ function Favorites() {
 
     const allApps = [...freeAppData, ...paidAppData];
 
-    // Fetch the app data for each liked app ID
+    // filter Favorites apps
     const apps = allApps.filter((app: AppData) => likedAppIds.includes(app.id));
     setFavoriteApps(apps);
   }, [freeApps, paidApps]);

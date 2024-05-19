@@ -17,7 +17,7 @@ body {
   box-sizing: border-box;
 }
 
-.p-2.active {
-  color: rgb(204, 195, 195);
+.nav-item.active {
+  color: rgb(59, 130, 246);
   text-decoration: underline;
 }

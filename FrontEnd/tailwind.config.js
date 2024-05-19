@@ -12,6 +12,9 @@ module.exports = withMT({
                 '80': '80px',
                 '100': '100vh',
             },
+            colors: {
+                'custom-gray': 'rgb(252, 249, 249)',
+            },
         },
     },
     plugins: [],

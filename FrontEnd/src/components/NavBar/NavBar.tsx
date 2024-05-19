@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 function NavBar() {
   const [theme, setTheme] = useState('light');
@@ -22,20 +24,29 @@ function NavBar() {
           AppStore Assigment
         </div>
 
-        <div className='flex items-baseline'>
+        <div className='flex items-center'>
           <button
             className='bg-blue-500 hover:bg-blue-700 dark:dark:bg-gray-500 dark:hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full text-xs mx-12'
             onClick={handleThemeChange}
           >
             Dark Mode
           </button>
-
-          <NavLink to='/' className='p-2 text-white'>
-            Home
-          </NavLink>
-          <NavLink to='/favorites' className='p-2 text-white'>
-            Favorites{' '}
-          </NavLink>
+          <div className='flex items-center justify-around bg-white mx-12 px-8 border-t-4 border-black'>
+            <NavLink
+              to='/'
+              className='nav-item flex flex-col-reverse text-gray-500 py-1.5 pr-12 pl-4'
+            >
+              <p>Home</p>
+              <FontAwesomeIcon icon={faHome} />
+            </NavLink>
+            <NavLink
+              to='/favorites'
+              className='nav-item flex flex-col-reverse text-gray-500 py-1.5 pl-12 pr-4'
+            >
+              <p>Favorites</p>
+              <FontAwesomeIcon icon={faHeart} />
+            </NavLink>
+          </div>
         </div>
       </nav>
     </div>

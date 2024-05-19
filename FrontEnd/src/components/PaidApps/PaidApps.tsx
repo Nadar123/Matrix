@@ -22,7 +22,7 @@ function PaidApps() {
       <h2 className='text-left py-8 text-black dark:text-white'>
         Top Paid Apps
       </h2>
-      <div className='w-2/5 flex flex-col items-start h-96 overflow-y-scroll  bg-gray-100 dark:bg-gray-500 bg-opacity-43 p-t-2 p-b-2 p-l-1.5 rounded-lg'>
+      <div className='w-2/5 flex flex-col items-start h-96 overflow-y-scroll  bg-custom-gray dark:bg-gray-500 bg-opacity-43 p-t-2 p-b-2 p-l-1.5 rounded-lg'>
         {paidApps.length > 0 ? (
           paidApps.map((app: any) => <PaidAppsItem key={app.id} app={app} />)
         ) : (
