@@ -47,6 +47,7 @@ const initialState = {
   error: '',
   freeApps: [] as IAppState[],
   paidApps: [] as IAppState[],
+  likedAppIds: [],
 };
 
 const globalSlice = createSlice({
