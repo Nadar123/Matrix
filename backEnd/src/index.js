@@ -30,15 +30,10 @@ app.get("/paid-apps", function (req, res) {
     });
 });
 
-app.post("/", function (req, res) {
-  console.log(req.body);
-  res.send("received");
-});
 
 app.listen(8080, function () {
   console.log("server running on 8080");
-}); //the server object listens on port 8080
+}); //the server listen on port 8080
 
-// STATUS: this works when sending GET or POST request
 
 module.exports = app;
