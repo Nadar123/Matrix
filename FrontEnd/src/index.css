@@ -21,3 +21,7 @@ body {
   color: rgb(59, 130, 246);
   text-decoration: underline;
 }
+
+.border-gray-400:hover {
+  border-color: aqua;
+}

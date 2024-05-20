@@ -40,9 +40,7 @@ function Favorites() {
           {favoriteApps.length > 0 ? (
             favoriteApps.map((app) => <FavoriteItem key={app.id} app={app} />)
           ) : (
-            <p className='text-center dark:text-gray-100'>
-              No selected apps in Favorites.
-            </p>
+            <p className='text-center dark:text-gray-100'>No selected apps.</p>
           )}
         </div>
       </Layout>
