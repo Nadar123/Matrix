@@ -10,7 +10,7 @@ function FreeAppItem({ app }: FreeAppItemProps) {
   return (
     <div
       key={app.id}
-      className='w-1/3 text-center border border-solid border-gray-400'
+      className='w-1/3 text-center border border-solid border-gray-400 hover:opacity-70'
     >
       <div className='pb-4'>
         <div
