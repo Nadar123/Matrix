@@ -1,52 +1,38 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import CrudService from '../../services/ajax.service';
-import { IApp, IAppState } from '../../constants/interfaces.constant';
+import { IApp, IResults } from '../../constants/interfaces.constant';
 
-const getAppsService = new CrudService<IApp>();
+const crudService = new CrudService();
 
-export const getFreeApps = createAsyncThunk('app/getFreeApps', async () => {
-  try {
-    const response = await getAppsService.getFreeApps();
-    const apps = response.feed.results.map((app: IApp) => ({
-      id: app.id,
-      artistName: app.artistName,
-      artworkUrl100: app.artworkUrl100,
-    }));
-    const data = {
-      apps: apps,
-    };
-
-    return data;
-  } catch (err) {
-    console.error('Error:', err);
-    throw err;
+export const fetchFreeApps = createAsyncThunk(
+  'global/fetchFreeApps',
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await crudService.getFreeApps();
+      return response;
+    } catch (err) {
+      console.error(err);
+    }
   }
-});
+);
 
-export const getPaidApps = createAsyncThunk('app/getPaidApps', async () => {
-  try {
-    const response = await getAppsService.getPaidApps();
-
-    const apps = response.feed.results.map((app: IApp) => ({
-      id: app.id,
-      artistName: app.artistName,
-      artworkUrl100: app.artworkUrl100,
-    }));
-    const data = {
-      apps: apps,
-    };
-    return data;
-  } catch (err) {
-    console.error('Error:', err);
-    throw err;
+export const fetchPaidApps = createAsyncThunk(
+  'global/fetchPaidApps',
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await crudService.getPaidApps();
+      return response;
+    } catch (err) {
+      console.error(err);
+    }
   }
-});
+);
 
 const initialState = {
   loading: false,
   error: '',
-  freeApps: [] as IAppState[],
-  paidApps: [] as IAppState[],
+  freeApps: {} as IApp,
+  paidApps: {} as IApp,
 };
 
 const globalSlice = createSlice({
@@ -54,33 +40,34 @@ const globalSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getFreeApps.pending, (state) => {
-      state.loading = true;
-    });
-
-    builder.addCase(getFreeApps.fulfilled, (state, action) => {
-      state.loading = false;
-      state.freeApps = action.payload.apps;
-    });
-
-    builder.addCase(getFreeApps.rejected, (state, { error }) => {
-      state.loading = false;
-      state.error = error.message || 'An error occurred';
-    });
-
-    builder.addCase(getPaidApps.pending, (state) => {
-      state.loading = true;
-    });
-
-    builder.addCase(getPaidApps.fulfilled, (state, { payload }) => {
-      state.loading = false;
-      state.paidApps = payload.apps;
-    });
-
-    builder.addCase(getPaidApps.rejected, (state, { error }) => {
-      state.loading = false;
-      state.error = error.message || 'An error occurred';
-    });
+    builder
+      .addCase(fetchFreeApps.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchFreeApps.fulfilled, (state, action) => {
+        state.loading = false;
+        if (action.payload) {
+          state.freeApps = action.payload;
+        }
+      })
+      .addCase(fetchFreeApps.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message || 'An error occurred';
+      });
+    builder
+      .addCase(fetchPaidApps.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchPaidApps.fulfilled, (state, action) => {
+        state.loading = false;
+        if (action.payload) {
+          state.paidApps = action.payload;
+        }
+      })
+      .addCase(fetchPaidApps.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message || 'An error occurred';
+      });
   },
 });
 

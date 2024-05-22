@@ -1,12 +1,13 @@
 import React from 'react';
-import FreeApp from '../components/FreeApps/FreeApps';
-import PaidApps from '../components/PaidApps/PaidApps';
 import Layout from '../components/UI/Layout/Layout';
+import FreeApps from '../components/FreeApps/FreeApps';
+import PaidApps from '../components/PaidApps/PaidApps';
 
 const Home: React.FC = () => {
   return (
     <Layout>
-      <FreeApp />
+      <h1>home</h1>
+      <FreeApps />
       <PaidApps />
     </Layout>
   );

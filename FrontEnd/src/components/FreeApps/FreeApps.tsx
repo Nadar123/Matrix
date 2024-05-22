@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../../state/store';
+import {
+  fetchFreeApps,
+  fetchPaidApps,
+} from '../../state/slices/global.features';
 import FreeAppItem from '../FreeAppItem/FreeAppItem';
-import { useSelector, useDispatch } from 'react-redux';
-import { getFreeApps } from '../../state/slices/global.features';
 import Spinner from '../UI/Spinner/Spinner';
-import { RootState } from '../../constants/interfaces.constant';
-import { AppDispatch } from '../../state/store';
 
 function FreeApps() {
   const dispatch = useDispatch<AppDispatch>();
@@ -12,20 +14,23 @@ function FreeApps() {
   const { freeApps, loading, error } = useSelector(
     (state: RootState) => state.global
   );
+  const freeAppsData = freeApps?.feed?.results || [];
+  const title = freeApps?.feed?.title || '';
 
   useEffect(() => {
-    dispatch(getFreeApps());
+    dispatch(fetchFreeApps());
+    dispatch(fetchPaidApps());
   }, [dispatch]);
 
-  if (loading) return <Spinner loading={loading} />;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <Spinner loading />;
 
+  if (error) return <h1>{error}</h1>;
   return (
     <div className='freeApps-warpper'>
-      <h1 className='text-left text-black dark:text-white pb-4'>Free Apps</h1>
+      <h1 className='text-left text-black dark:text-white pb-4'>{title}</h1>
       <div className='flex items-center gap-x-5 overflow-x-scroll overflow-hidden'>
-        {freeApps.length > 0 ? (
-          freeApps.map((app: any) => <FreeAppItem key={app.id} app={app} />)
+        {freeAppsData && freeAppsData.length > 0 ? (
+          freeAppsData.map((app: any) => <FreeAppItem key={app.id} {...app} />)
         ) : (
           <p>No Apps to show</p>
         )}

@@ -1,11 +1,6 @@
 import React from 'react';
-import { AppData } from '../../constants/interfaces.constant';
 
-interface FavoriteItemProps {
-  app: AppData;
-}
-
-const FavoriteItem: React.FC<FavoriteItemProps> = ({ app }) => (
+const FavoriteItem: React.FC<any> = ({ app }) => (
   <div className='bg-white-500 dark:bg-gray-800 w-full shadow-md'>
     <h2 className='p-4 text-black dark:text-white'>{app.artistName}</h2>
     <div className='w-[150px] h-full mx-auto overflow-hidden cursor-pointer pb-8'>

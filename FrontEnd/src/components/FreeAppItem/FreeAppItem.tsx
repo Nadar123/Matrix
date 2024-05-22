@@ -1,15 +1,13 @@
 import React from 'react';
 import useLike from '../../hooks/useLike';
-import { FreeAppItemProps } from '../../constants/interfaces.constant';
-import useImageLoader from '../../hooks/useImageLoader';
+import { IResults } from '../../constants/interfaces.constant';
 
-function FreeAppItem({ app }: FreeAppItemProps) {
-  const { isLiked, toggleLike } = useLike(app.id);
-  const { imageObjectURL } = useImageLoader(app.artworkUrl100);
+function FreeAppItem({ artistName, id, artworkUrl100 }: IResults) {
+  const { isLiked, toggleLike } = useLike(id);
 
   return (
     <div
-      key={app.id}
+      key={id}
       className='w-1/3 text-center border border-solid border-gray-400 hover:opacity-70'
     >
       <div className='pb-4'>
@@ -39,15 +37,15 @@ function FreeAppItem({ app }: FreeAppItemProps) {
         <img
           style={{ minHeight: '100px' }}
           className='object-cover rounded-[10px]'
-          src={imageObjectURL || ''}
-          alt={app.artistName}
+          src={artworkUrl100 || ''}
+          alt={artistName}
         />
       </div>
       <p
         style={{ minHeight: '80px' }}
         className='p-2.5 text-xl font-normal leading-normal text-black dark:text-white'
       >
-        {app.artistName}
+        {artistName}
       </p>
     </div>
   );

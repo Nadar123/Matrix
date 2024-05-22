@@ -1,55 +1,42 @@
-export interface App {
-  id: string;
-  artworkUrl100: string;
-  artistName: string;
-}
-
-export interface IApp extends App {
+export interface IResults {
   name: string;
   artistName: string;
+  id: string;
+  artworkUrl100: string;
+  kind: string;
+  releaseDate: string;
 }
 
-export interface Feed {
+export interface ILink {
+  self: string;
+}
+
+export interface IAuthor {
+  name: string;
+  url: string;
+}
+
+export interface IGenres {
+  genres: [];
+}
+
+export interface IFeed {
   id: string;
   title: string;
-  results: App[];
+  results: IResults[];
+  author: IAuthor;
+  links: ILink[];
+  copyright: string;
+  country: string;
+  icon: string;
+  updated: string;
+  genres: IGenres[];
 }
 
-export interface GlobalState {
-  response: { feed: Feed } | null;
-  freeApps: App[] | any;
-  paidApps: App[] | any;
+export interface IApp {
+  feed: IFeed;
   loading: boolean;
-  error: string | null;
-}
-
-export interface RootState {
-  global: GlobalState;
-}
-
-export interface AppData {
-  id: string;
-  artworkUrl100: string;
-  artistName: string;
-}
-export interface FreeAppsData {
-  feed: Feed;
-}
-
-export interface FreeAppItemProps {
-  app: App;
-}
-
-export interface PaidAppItemProps {
-  app: App;
-}
-
-export interface IAppState extends App {
-  name: string;
-}
-
-export interface IAppsResponse {
-  apps: IAppState[];
-  response: any;
-  responseData: any;
+  error: string;
+  freeApps?: IResults[] | undefined;
+  paidApps?: IResults[] | undefined;
 }
